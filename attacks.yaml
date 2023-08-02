@@ -1,0 +1,305 @@
+blocklist_de:
+    filter: remove_comments
+    update_every: 15m0s
+    url: http://lists.blocklist.de/lists/all.txt
+    info: '[Blocklist.de](https://www.blocklist.de/) IPs that have been detected by fail2ban in the last 48 hours'
+    maintainer: Blocklist.de
+    maintainer_url: https://www.blocklist.de/
+
+blocklist_de_apache:
+    filter: remove_comments
+    update_every: 15m0s
+    url: http://lists.blocklist.de/lists/apache.txt
+    info: '[Blocklist.de](https://www.blocklist.de/) All IP addresses which have been reported within the last 48 hours as having run attacks on the service Apache, Apache-DDOS, RFI-Attacks.'
+    maintainer: Blocklist.de
+    maintainer_url: https://www.blocklist.de/
+
+blocklist_de_bots:
+    filter: remove_comments
+    update_every: 15m0s
+    url: http://lists.blocklist.de/lists/bots.txt
+    info: '[Blocklist.de](https://www.blocklist.de/) All IP addresses which have been reported within the last 48 hours as having run attacks on the RFI-Attacks, REG-Bots, IRC-Bots or BadBots (BadBots = it has posted a Spam-Comment on a open Forum or Wiki).'
+    maintainer: Blocklist.de
+    maintainer_url: https://www.blocklist.de/
+
+blocklist_de_bruteforce:
+    filter: remove_comments
+    update_every: 15m0s
+    url: http://lists.blocklist.de/lists/bruteforcelogin.txt
+    info: '[Blocklist.de](https://www.blocklist.de/) All IPs which attacks Joomla, Wordpress and other Web-Logins with Brute-Force Logins.'
+    maintainer: Blocklist.de
+    maintainer_url: https://www.blocklist.de/
+
+blocklist_de_ftp:
+    filter: remove_comments
+    update_every: 15m0s
+    url: http://lists.blocklist.de/lists/ftp.txt
+    info: '[Blocklist.de](https://www.blocklist.de/) All IP addresses which have been reported within the last 48 hours for attacks on the Service FTP.'
+    maintainer: Blocklist.de
+    maintainer_url: https://www.blocklist.de/
+
+blocklist_de_imap:
+    filter: remove_comments
+    update_every: 15m0s
+    url: http://lists.blocklist.de/lists/imap.txt
+    info: '[Blocklist.de](https://www.blocklist.de/) All IP addresses which have been reported within the last 48 hours for attacks on the Service imap, sasl, pop3, etc.'
+    maintainer: Blocklist.de
+    maintainer_url: https://www.blocklist.de/
+
+blocklist_de_mail:
+    filter: remove_comments
+    update_every: 15m0s
+    url: http://lists.blocklist.de/lists/mail.txt
+    info: '[Blocklist.de](https://www.blocklist.de/) All IP addresses which have been reported within the last 48 hours as having run attacks on the service Mail, Postfix.'
+    maintainer: Blocklist.de
+    maintainer_url: https://www.blocklist.de/
+
+blocklist_de_sip:
+    filter: remove_comments
+    update_every: 15m0s
+    url: http://lists.blocklist.de/lists/sip.txt
+    info: '[Blocklist.de](https://www.blocklist.de/) All IP addresses that tried to login in a SIP, VOIP or Asterisk Server and are included in the IPs list from infiltrated.net'
+    maintainer: Blocklist.de
+    maintainer_url: https://www.blocklist.de/
+
+blocklist_de_ssh:
+    filter: remove_comments
+    update_every: 15m0s
+    url: http://lists.blocklist.de/lists/ssh.txt
+    info: '[Blocklist.de](https://www.blocklist.de/) All IP addresses which have been reported within the last 48 hours as having run attacks on the service SSH.'
+    maintainer: Blocklist.de
+    maintainer_url: https://www.blocklist.de/
+
+blocklist_de_strongips:
+    filter: remove_comments
+    update_every: 15m0s
+    url: http://lists.blocklist.de/lists/strongips.txt
+    info: '[Blocklist.de](https://www.blocklist.de/) All IPs which are older then 2 month and have more then 5.000 attacks.'
+    maintainer: Blocklist.de
+    maintainer_url: https://www.blocklist.de/
+
+botvrij_dst:
+    filter: remove_comments
+    update_every: 24h0m0s
+    url: http://www.botvrij.eu/data/ioclist.ip-dst.raw
+    info: '[botvrij.eu](http://www.botvrij.eu/) Indicators of Compromise (IOCS) about malicious destination IPs, gathered via open source information feeds (blog pages and PDF documents) and then consolidated into different datasets. To ensure the quality of the data all entries older than approx. 6 months are removed.'
+    maintainer: botvrij.eu
+    maintainer_url: http://www.botvrij.eu/
+
+botvrij_src:
+    filter: remove_comments
+    update_every: 24h0m0s
+    url: http://www.botvrij.eu/data/ioclist.ip-src.raw
+    info: '[botvrij.eu](http://www.botvrij.eu/) Indicators of Compromise (IOCS) about malicious source IPs, gathered via open source information feeds (blog pages and PDF documents) and then consolidated into different datasets. To ensure the quality of the data all entries older than approx. 6 months are removed.'
+    maintainer: botvrij.eu
+    maintainer_url: http://www.botvrij.eu/
+    can_be_empty: true
+
+bruteforceblocker:
+    filter: remove_comments
+    update_every: 3h0m0s
+    url: http://danger.rulez.sk/projects/bruteforceblocker/blist.php
+    info: '[danger.rulez.sk bruteforceblocker](http://danger.rulez.sk/index.php/bruteforceblocker/) (fail2ban alternative for SSH on OpenBSD). This is an automatically generated list from users reporting failed authentication attempts. An IP seems to be included if 3 or more users report it. Its retention pocily seems 30 days.'
+    maintainer: danger.rulez.sk
+    maintainer_url: http://danger.rulez.sk/index.php/bruteforceblocker/
+
+cruzit_web_attacks:
+    filter: cat
+    update_every: 12h0m0s
+    url: https://www.cruzit.com/xwbl2txt.php
+    info: '[CruzIt.com](http://www.cruzit.com/wbl.php) IPs of compromised machines scanning for vulnerabilities and DDOS attacks'
+    maintainer: CruzIt.com
+    maintainer_url: http://www.cruzit.com/wbl.php
+
+dataplane_dnsrd:
+    filter: dataplane_column3
+    update_every: 1h0m0s
+    url: https://dataplane.org/dnsrd.txt
+    info: '[DataPlane.org](https://dataplane.org/) IP addresses that have been identified as sending recursive DNS queries to a remote host. This report lists addresses that may be cataloging open DNS resolvers or evaluating cache entries.'
+    maintainer: DataPlane.org
+    maintainer_url: https://dataplane.org/
+
+dataplane_dnsrdany:
+    filter: dataplane_column3
+    update_every: 1h0m0s
+    url: https://dataplane.org/dnsrdany.txt
+    info: '[DataPlane.org](https://dataplane.org/) IP addresses that have been identified as sending recursive DNS IN ANY queries to a remote host. This report lists addresses that may be cataloging open DNS resolvers for the purpose of later using them to facilitate DNS amplification and reflection attacks.'
+    maintainer: DataPlane.org
+    maintainer_url: https://dataplane.org/
+
+dataplane_dnsversion:
+    filter: dataplane_column3
+    update_every: 1h0m0s
+    url: https://dataplane.org/dnsversion.txt
+    info: '[DataPlane.org](https://dataplane.org/) IP addresses that have been identified as sending DNS CH TXT VERSION.BIND queries to a remote host. This report lists addresses that may be cataloging DNS software.'
+    maintainer: DataPlane.org
+    maintainer_url: https://dataplane.org/
+
+dataplane_sipinvitation:
+    filter: dataplane_column3
+    update_every: 1h0m0s
+    url: https://dataplane.org/sipinvitation.txt
+    info: '[DataPlane.org](https://dataplane.org/) IP addresses that have been seen initiating a SIP INVITE operation to a remote host. This report lists hosts that are suspicious of more than just port scanning.  These hosts may be SIP client cataloging or conducting various forms of telephony abuse.'
+    maintainer: DataPlane.org
+    maintainer_url: https://dataplane.org/
+
+dataplane_sipquery:
+    filter: dataplane_column3
+    update_every: 1h0m0s
+    url: https://dataplane.org/sipquery.txt
+    info: '[DataPlane.org](https://dataplane.org/) IP addresses that has been seen initiating a SIP OPTIONS query to a remote host. This report lists hosts that are suspicious of more than just port scanning. These hosts may be SIP server cataloging or conducting various forms of telephony abuse.'
+    maintainer: DataPlane.org
+    maintainer_url: https://dataplane.org/
+
+dataplane_sipregistration:
+    filter: dataplane_column3
+    update_every: 1h0m0s
+    url: https://dataplane.org/sipregistration.txt
+    info: '[DataPlane.org](https://dataplane.org/) IP addresses that have been seen initiating a SIP REGISTER operation to a remote host. This report lists hosts that are suspicious of more than just port scanning.  These hosts may be SIP client cataloging or conducting various forms of telephony abuse.'
+    maintainer: DataPlane.org
+    maintainer_url: https://dataplane.org/
+
+dataplane_sshclient:
+    filter: dataplane_column3
+    update_every: 1h0m0s
+    url: https://dataplane.org/sshclient.txt
+    info: '[DataPlane.org](https://dataplane.org/) IP addresses that has been seen initiating an SSH connection to a remote host. This report lists hosts that are suspicious of more than just port scanning.  These hosts may be SSH server cataloging or conducting authentication attack attempts.'
+    maintainer: DataPlane.org
+    maintainer_url: https://dataplane.org/
+
+dataplane_sshpwauth:
+    filter: dataplane_column3
+    update_every: 1h0m0s
+    url: https://dataplane.org/sshpwauth.txt
+    info: '[DataPlane.org](https://dataplane.org/) IP addresses that has been seen attempting to remotely login to a host using SSH password authentication. This report lists hosts that are highly suspicious and are likely conducting malicious SSH password authentication attacks.'
+    maintainer: DataPlane.org
+    maintainer_url: https://dataplane.org/
+
+dataplane_vncrfb:
+    filter: dataplane_column3
+    update_every: 1h0m0s
+    url: https://dataplane.org/vncrfb.txt
+    info: '[DataPlane.org](https://dataplane.org/) IP addresses that have been seen initiating a VNC remote frame buffer (RFB) session to a remote host. This report lists hosts that are suspicious of more than just port scanning. These hosts may be VNC server cataloging or conducting various forms of remote access abuse.'
+    maintainer: DataPlane.org
+    maintainer_url: https://dataplane.org/
+
+dshield:
+    filter: dshield_parser
+    update_every: 10m0s
+    url: https://feeds.dshield.org/block.txt
+    info: '[DShield.org](https://dshield.org/) top 20 attacking class C (/24) subnets over the last three days'
+    maintainer: DShield.org
+    maintainer_url: https://dshield.org/
+
+et_block:
+    filter: remove_comments
+    update_every: 12h0m0s
+    url: http://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt
+    info: '[EmergingThreats.net](http://www.emergingthreats.net/) default blacklist (at the time of writing includes spamhaus DROP, dshield and abuse.ch trackers, which are available separately too - prefer to use the direct ipsets instead of this, they seem to lag a bit in updates)'
+    maintainer: Emerging Threats
+    maintainer_url: http://www.emergingthreats.net/
+
+et_compromised:
+    filter: remove_comments
+    update_every: 12h0m0s
+    url: http://rules.emergingthreats.net/blockrules/compromised-ips.txt
+    info: '[EmergingThreats.net compromised hosts](http://doc.emergingthreats.net/bin/view/Main/CompromisedHost)'
+    maintainer: Emerging Threats
+    maintainer_url: http://www.emergingthreats.net/
+
+et_dshield:
+    filter: pix_deny_rules_to_ipv4
+    update_every: 12h0m0s
+    url: http://rules.emergingthreats.net/fwrules/emerging-PIX-DSHIELD.rules
+    info: '[EmergingThreats.net](http://www.emergingthreats.net/) dshield blocklist'
+    maintainer: Emerging Threats
+    maintainer_url: http://www.emergingthreats.net/
+
+et_spamhaus:
+    filter: pix_deny_rules_to_ipv4
+    update_every: 12h0m0s
+    url: http://rules.emergingthreats.net/fwrules/emerging-PIX-DROP.rules
+    info: '[EmergingThreats.net](http://www.emergingthreats.net/) spamhaus blocklist'
+    maintainer: Emerging Threats
+    maintainer_url: http://www.emergingthreats.net/
+
+greensnow:
+    filter: remove_comments
+    update_every: 30m0s
+    url: http://blocklist.greensnow.co/greensnow.txt
+    info: '[GreenSnow](https://greensnow.co/) is a team harvesting a large number of IPs from different computers located around the world. GreenSnow is comparable with SpamHaus.org for attacks of any kind except for spam. Their list is updated automatically and you can withdraw at any time your IP address if it has been listed. Attacks / bruteforce that are monitored are: Scan Port, FTP, POP3, mod_security, IMAP, SMTP, SSH, cPanel, etc.'
+    maintainer: GreenSnow.co
+    maintainer_url: https://greensnow.co/
+
+haley_ssh:
+    filter: hostdeny
+    update_every: 4h0m0s
+    url: https://charles.the-haleys.org/ssh_dico_attack_hdeny_format.php/hostsdeny.txt
+    info: '[Charles Haley](http://charles.the-haleys.org) IPs launching SSH dictionary attacks.'
+    maintainer: Charles Haley
+    maintainer_url: http://charles.the-haleys.org
+
+iblocklist_cruzit_web_attacks:
+    filter: p2p_gz
+    update_every: 12h0m0s
+    url: http://list.iblocklist.com/?list=czvaehmjpsnwwttrdoyl&fileformat=p2p&archiveformat=gz
+    info: CruzIT IP list with individual IP addresses of compromised machines scanning for vulnerabilities and DDOS attacks.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_dshield:
+    filter: p2p_gz
+    update_every: 12h0m0s
+    url: http://list.iblocklist.com/?list=xpbqleszmajjesnzddhv&fileformat=p2p&archiveformat=gz
+    info: known Hackers and such people.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_hijacked:
+    filter: p2p_gz
+    update_every: 12h0m0s
+    url: http://list.iblocklist.com/?list=usrcshglbiilevmyfhse&fileformat=p2p&archiveformat=gz
+    info: Hijacked IP-Blocks. Contains hijacked IP-Blocks and known IP-Blocks that are used to deliver Spam. This list is a combination of lists with hijacked IP-Blocks. Hijacked IP space are IP blocks that are being used without permission by organizations that have no relation to original organization (or its legal successor) that received the IP block. In essence it's stealing of somebody else's IP resources.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_spamhaus_drop:
+    filter: p2p_gz
+    update_every: 12h0m0s
+    url: http://list.iblocklist.com/?list=zbdlwrqkabxbcppvrnos&fileformat=p2p&archiveformat=gz
+    info: Spamhaus.org DROP (Don't Route Or Peer) list.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+talosintel_ipfilter:
+    filter: remove_comments
+    update_every: 15m0s
+    url: https://talosintel.com/feeds/ip-filter.blf
+    info: '[TalosIntel.com](http://talosintel.com/additional-resources/) List of known malicious network threats'
+    maintainer: TalosIntel.com
+    maintainer_url: http://talosintel.com/
+
+uscert_hidden_cobra:
+    filter: csv
+    update_every: 24h0m0s
+    url: https://www.us-cert.gov/sites/default/files/publications/TA-17-164A_csv.csv
+    info: Since 2009, HIDDEN COBRA actors have leveraged their capabilities to target and compromise a range of victims; some intrusions have resulted in the exfiltration of data while others have been disruptive in nature. Commercial reporting has referred to this activity as Lazarus Group and Guardians of Peace. DHS and FBI assess that HIDDEN COBRA actors will continue to use cyber operations to advance their government’s military and strategic objectives. Tools and capabilities used by HIDDEN COBRA actors include DDoS botnets, keyloggers, remote access tools (RATs), and wiper malware. Variants of malware and tools used by HIDDEN COBRA actors include Destover, Wild Positron/Duuzer and Hangman.
+    maintainer: US Cert
+    maintainer_url: https://www.us-cert.gov/ncas/alerts/TA17-164A
+
+voipbl:
+    filter: remove_comments
+    update_every: 4h0m0s
+    url: https://voipbl.org/update/
+    info: '[VoIPBL.org](https://voipbl.org/) a distributed VoIP blacklist that is aimed to protects against VoIP Fraud and minimizing abuse for network that have publicly accessible PBX''s. Several algorithms, external sources and manual confirmation are used before they categorize something as an attack and determine the threat level.'
+    maintainer: VoIPBL.org
+    maintainer_url: https://voipbl.org/
+
+darklist_de:
+    filter: remove_comments
+    update_every: 24h0m0s
+    url: http://www.darklist.de/raw.php
+    info: '[darklist.de](http://www.darklist.de/) ssh fail2ban reporting'
+    maintainer: darklist.de
+    maintainer_url: http://www.darklist.de/
+    disabled_reason: "The website crashed"

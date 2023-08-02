@@ -1,0 +1,63 @@
+bogons:
+    filter: remove_comments
+    update_every: 24h0m0s
+    url: http://www.team-cymru.org/Services/Bogons/bogon-bn-agg.txt
+    info: '[Team-Cymru.org](http://www.team-cymru.org) private and reserved addresses defined by RFC 1918, RFC 5735, and RFC 6598 and netblocks that have not been allocated to a regional internet registry'
+    maintainer: Team Cymru
+    maintainer_url: http://www.team-cymru.org/
+
+cidr_report_bogons:
+    filter: remove_comments
+    update_every: 24h0m0s
+    url: http://www.cidr-report.org/bogons/freespace-prefix.txt
+    info: Unallocated (Free) Address Space, generated on a daily basis using the IANA registry files, the Regional Internet Registry stats files and the Regional Internet Registry whois data.
+    maintainer: CIDR-Report.org
+    maintainer_url: http://www.cidr-report.org
+
+fullbogons:
+    filter: remove_comments
+    update_every: 24h0m0s
+    url: http://www.team-cymru.org/Services/Bogons/fullbogons-ipv4.txt
+    info: '[Team-Cymru.org](http://www.team-cymru.org) IP space that has been allocated to an RIR, but not assigned by that RIR to an actual ISP or other end-user'
+    maintainer: Team Cymru
+    maintainer_url: http://www.team-cymru.org/
+
+iblocklist_bogons:
+    filter: p2p_gz
+    update_every: 12h0m0s
+    url: http://list.iblocklist.com/?list=gihxqmhyunbxhbmgqrla&fileformat=p2p&archiveformat=gz
+    info: Unallocated address space.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_cidr_report_bogons:
+    filter: p2p_gz
+    update_every: 12h0m0s
+    url: http://list.iblocklist.com/?list=lujdnbasfaaixitgmxpp&fileformat=p2p&archiveformat=gz
+    info: cidr-report.org IP list of Unallocated address space.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_iana_multicast:
+    filter: p2p_gz
+    update_every: 12h0m0s
+    url: http://list.iblocklist.com/?list=pwqnlynprfgtjbgqoizj&fileformat=p2p&archiveformat=gz
+    info: IANA Multicast IPs.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_iana_private:
+    filter: p2p_gz
+    update_every: 12h0m0s
+    url: http://list.iblocklist.com/?list=cslpybexmxyuacbyuvib&fileformat=p2p&archiveformat=gz
+    info: IANA Private IPs.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_iana_reserved:
+    filter: p2p_gz
+    update_every: 12h0m0s
+    url: http://list.iblocklist.com/?list=bcoepfyewziejvcqyhqo&fileformat=p2p&archiveformat=gz
+    info: IANA Reserved IPs.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/

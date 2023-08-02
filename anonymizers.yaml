@@ -1,0 +1,80 @@
+dm_tor:
+    filter: remove_comments
+    update_every: 30m0s
+    url: https://www.dan.me.uk/torlist/
+    info: '[dan.me.uk](https://www.dan.me.uk) dynamic list of TOR nodes'
+    maintainer: dan.me.uk
+    maintainer_url: https://www.dan.me.uk/
+
+et_tor:
+    filter: snort_alert_rules_to_ipv4
+    update_every: 12h0m0s
+    url: http://rules.emergingthreats.net/blockrules/emerging-tor.rules
+    info: '[EmergingThreats.net TOR list](http://doc.emergingthreats.net/bin/view/Main/TorRules) of TOR network IPs'
+    maintainer: Emerging Threats
+    maintainer_url: http://www.emergingthreats.net/
+
+iblocklist_onion_router:
+    filter: p2p_gz
+    update_every: 12h0m0s
+    url: https://list.iblocklist.com/?list=togdoptykrlolpddwbvz&fileformat=p2p&archiveformat=gz
+    info: The Onion Router IP addresses.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_proxies:
+    filter: p2p_gz_proxy
+    update_every: 12h0m0s
+    url: https://list.iblocklist.com/?list=xoebmbyexwuiogmbyprb&fileformat=p2p&archiveformat=gz
+    info: Open Proxies IPs list (without TOR)
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+maxmind_proxy_fraud:
+    filter: parse_maxmind_proxy_fraud
+    update_every: 4h0m0s
+    url: https://www.maxmind.com/en/high-risk-ip-sample-list
+    info: '[MaxMind.com](https://www.maxmind.com/en/high-risk-ip-sample-list) sample list of high-risk IP addresses.'
+    maintainer: MaxMind.com
+    maintainer_url: https://www.maxmind.com/en/high-risk-ip-sample-list
+
+socks_proxy:
+    filter: extract_ipv4_from_any_file
+    update_every: 10m0s
+    url: http://www.socks-proxy.net/
+    info: '[socks-proxy.net](http://www.socks-proxy.net/) open SOCKS proxies'
+    maintainer: Free Proxy List
+    maintainer_url: http://free-proxy-list.net/
+
+sslproxies:
+    filter: extract_ipv4_from_any_file
+    update_every: 10m0s
+    url: http://www.sslproxies.org/
+    info: '[SSLProxies.org](http://www.sslproxies.org/) open SSL proxies'
+    maintainer: Free Proxy List
+    maintainer_url: http://free-proxy-list.net/
+
+tor_exits:
+    filter: torproject_exits
+    update_every: 5m0s
+    url: https://check.torproject.org/exit-addresses
+    info: '[TorProject.org](https://www.torproject.org) list of all current TOR exit points (TorDNSEL)'
+    maintainer: TorProject.org
+    maintainer_url: https://www.torproject.org/
+
+xroxy:
+    filter: parse_rss_proxy
+    update_every: 1h0m0s
+    url: http://www.xroxy.com/proxyrss.xml
+    info: '[xroxy.com](http://www.xroxy.com) open proxies (this list is composed using an RSS feed)'
+    maintainer: Xroxy.com
+    maintainer_url: http://www.xroxy.com/
+
+proxz:
+    filter: parse_rss_proxy
+    update_every: 1h0m0s
+    url: http://www.proxz.com/proxylists.xml
+    info: '[proxz.com](http://www.proxz.com) open proxies (this list is composed using an RSS feed)'
+    maintainer: ProxZ.com
+    maintainer_url: http://www.proxz.com/
+    disabled_reason: "Website is broken."

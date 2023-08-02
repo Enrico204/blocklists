@@ -1,0 +1,83 @@
+nixspam:
+    filter: gz_second_word
+    update_every: 15m0s
+    url: https://www.nixspam.net/download/nixspam-ip.dump.gz
+    info: '[NiX Spam](http://www.heise.de/ix/NiX-Spam-DNSBL-and-blacklist-for-download-499637.html) IP addresses that sent spam in the last hour - automatically generated entries without distinguishing open proxies from relays, dialup gateways, and so on. All IPs are removed after 12 hours if there is no spam from there.'
+    maintainer: NiX Spam
+    maintainer_url: http://www.heise.de/ix/NiX-Spam-DNSBL-and-blacklist-for-download-499637.html
+
+php_bad:
+    filter: parse_php_rss
+    update_every: 1h0m0s
+    url: http://www.projecthoneypot.org/list_of_ips.php?t=b&rss=1
+    info: '[projecthoneypot.org](http://www.projecthoneypot.org/?rf=192670) bad web hosts (this list is composed using an RSS feed)'
+    maintainer: ProjectHoneypot.org
+    maintainer_url: http://www.projecthoneypot.org/
+
+php_commenters:
+    filter: parse_php_rss
+    update_every: 1h0m0s
+    url: http://www.projecthoneypot.org/list_of_ips.php?t=c&rss=1
+    info: '[projecthoneypot.org](http://www.projecthoneypot.org/?rf=192670) comment spammers (this list is composed using an RSS feed)'
+    maintainer: ProjectHoneypot.org
+    maintainer_url: http://www.projecthoneypot.org/
+
+php_dictionary:
+    filter: parse_php_rss
+    update_every: 1h0m0s
+    url: http://www.projecthoneypot.org/list_of_ips.php?t=d&rss=1
+    info: '[projecthoneypot.org](http://www.projecthoneypot.org/?rf=192670) directory attackers (this list is composed using an RSS feed)'
+    maintainer: ProjectHoneypot.org
+    maintainer_url: http://www.projecthoneypot.org/
+
+php_harvesters:
+    filter: parse_php_rss
+    update_every: 1h0m0s
+    url: http://www.projecthoneypot.org/list_of_ips.php?t=h&rss=1
+    info: '[projecthoneypot.org](http://www.projecthoneypot.org/?rf=192670) harvesters (IPs that surf the internet looking for email addresses) (this list is composed using an RSS feed)'
+    maintainer: ProjectHoneypot.org
+    maintainer_url: http://www.projecthoneypot.org/
+
+php_spammers:
+    filter: parse_php_rss
+    update_every: 1h0m0s
+    url: http://www.projecthoneypot.org/list_of_ips.php?t=s&rss=1
+    info: '[projecthoneypot.org](http://www.projecthoneypot.org/?rf=192670) spam servers (IPs used by spammers to send messages) (this list is composed using an RSS feed)'
+    maintainer: ProjectHoneypot.org
+    maintainer_url: http://www.projecthoneypot.org/
+
+cleanmx_phishing:
+    filter: parse_cvs_clean_mx_phishing
+    update_every: 30m0s
+    url: http://support.clean-mx.de/clean-mx/xmlphishing?response=alive&format=csv&domain=
+    info: '[Clean-MX.de](http://support.clean-mx.de/) IPs sending phishing messages'
+    maintainer: Clean-MX.de
+    maintainer_url: http://support.clean-mx.de/
+    disabled_reason: "Custom (registered) user agent is needed."
+
+cleanmx_viruses:
+    filter: parse_xml_clean_mx
+    update_every: 30m0s
+    url: http://support.clean-mx.de/clean-mx/xmlviruses.php?response=alive&fields=ip
+    info: '[Clean-MX.de](http://support.clean-mx.de/clean-mx/viruses.php) IPs with viruses'
+    maintainer: Clean-MX.de
+    maintainer_url: http://support.clean-mx.de/clean-mx/viruses.php
+    disabled_reason: "Custom (registered) user agent is needed."
+
+hphosts_grm:
+    filter: hphosts2ips
+    update_every: 24h0m0s
+    url: http://hosts-file.net/grm.txt
+    info: '[hpHosts](http://hosts-file.net/?s=Download) sites involved in spam (that do not otherwise meet any other classification criteria) listed in the hpHosts database. The maintainer''s file contains hostnames, which have been DNS resolved to IP addresses.'
+    maintainer: hpHosts
+    maintainer_url: http://hosts-file.net/
+    disabled_reason: "TODO: see if it's wise to resolv 288k hosts..."
+
+lashback_ubl:
+    filter: remove_comments
+    update_every: 24h0m0s
+    url: http://www.unsubscore.com/blacklist.txt
+    info: '[The LashBack UBL](http://blacklist.lashback.com/) The Unsubscribe Blacklist (UBL) is a real-time blacklist of IP addresses which are sending email to names harvested from suppression files (this is a big list, more than 500.000 IPs)'
+    maintainer: The LashBack Unsubscribe Blacklist
+    maintainer_url: http://blacklist.lashback.com/
+    disabled_reason: "The website is not reachable anymore."

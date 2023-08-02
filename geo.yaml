@@ -1,0 +1,23 @@
+ipip_country:
+  filter: todo
+  update_every: 24h
+  url: https://cdn.ipip.net/17mon/country.zip
+  info: '[ipip.net](http://ipip.net)'
+  maintainer: IPIP.net
+  maintainer_url: https://www.ipip.net/
+
+ip2location_lite:
+  filter: todo
+  update_every: 24h
+  url: https://download.ip2location.com/lite/IP2LOCATION-LITE-DB1.CSV.ZIP
+  info: "[IP2Location.com](http://lite.ip2location.com/database-ip-country)"
+  maintainer: IP2Location.com
+  maintainer_url: https://www.ip2location.com/
+
+ipdeny_country:
+  filter: todo
+  update_every: 24h
+  url: https://www.ipdeny.com/ipblocks/data/countries/all-zones.tar.gz
+  info: "[IPDeny.com](http://www.ipdeny.com/)"
+  maintainer: IPDeny.com
+  maintainer_url: https://www.ipdeny.com/

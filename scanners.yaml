@@ -1,0 +1,14 @@
+# This is a test for local files
+#local_driftnet:
+#  filter: local_files
+#  update_every: 1m
+#  url: file://./driftnet.iplist
+#  info: 'DriftNet (test local file)'
+
+acknowledged_scanners:
+  filter: acknowledged_scanners
+  update_every: 168h
+  url: https://gitlab.com/mcollins_at_isi/acknowledged_scanners.git
+  info: '[The Acknowledged Scanners project](https://gitlab.com/mcollins_at_isi/acknowledged_scanners) - The acknowledged scanner repository tracks the ip addresses and other indicia of scanners which, we believe are **non-hostile**.'
+  maintainer: "Michael Collins"
+  maintainer_url: https://gitlab.com/mcollins_at_isi/acknowledged_scanners

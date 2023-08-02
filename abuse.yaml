@@ -1,0 +1,143 @@
+blocklist_net_ua:
+    filter: remove_comments_semi_colon
+    update_every: 10m0s
+    url: https://blocklist.net.ua/blocklist.csv
+    info: '[blocklist.net.ua](https://blocklist.net.ua) The BlockList project was created to become protection against negative influence of the harmful and potentially dangerous events on the Internet. First of all this service will help internet and hosting providers to protect subscribers sites from being hacked. BlockList will help to stop receiving a large amount of spam from dubious SMTP relays or from attempts of brute force passwords to servers and network equipment.'
+    maintainer: blocklist.net.ua
+    maintainer_url: https://blocklist.net.ua
+
+botscout:
+    filter: botscout_filter
+    update_every: 30m0s
+    url: http://botscout.com/last_caught_cache.htm
+    info: '[BotScout](http://botscout.com/) helps prevent automated web scripts, known as bots, from registering on forums, polluting databases, spreading spam, and abusing forms on web sites. They do this by tracking the names, IPs, and email addresses that bots use and logging them as unique signatures for future reference. They also provide a simple yet powerful API that you can use to test forms when they''re submitted on your site. This list is composed of the most recently-caught bots.'
+    maintainer: BotScout.com
+    maintainer_url: http://botscout.com/
+
+cleantalk_new:
+    filter: parse_cleantalk
+    update_every: 24h
+    url: https://cleantalk.org/blacklists/submited_today
+    info: '[CleanTalk](https://cleantalk.org/) Recent HTTP Spammers'
+    maintainer: CleanTalk
+    maintainer_url: https://cleantalk.org/
+
+cleantalk_top20:
+    filter: parse_cleantalk
+    update_every: 24h
+    url: https://cleantalk.org/blacklists/top20
+    info: '[CleanTalk](https://cleantalk.org/) Top 20 HTTP Spammers'
+    maintainer: CleanTalk
+    maintainer_url: https://cleantalk.org/
+
+cleantalk_updated:
+    filter: parse_cleantalk
+    update_every: 24h
+    url: https://cleantalk.org/blacklists/updated_today
+    info: '[CleanTalk](https://cleantalk.org/) Recurring HTTP Spammers'
+    maintainer: CleanTalk
+    maintainer_url: https://cleantalk.org/
+
+gpf_comics:
+    filter: gpf_comics
+    update_every: 24h0m0s
+    url: https://www.gpf-comics.com/dnsbl/export.php
+    info: The GPF DNS Block List is a list of IP addresses on the Internet that have attacked the [GPF Comics](http://www.gpf-comics.com/) family of Web sites. IPs on this block list have been banned from accessing all of our servers because they were caught in the act of spamming, attempting to exploit our scripts, scanning for vulnerabilities, or consuming resources to the detriment of our human visitors.
+    maintainer: GPF Comics
+    maintainer_url: https://www.gpf-comics.com/dnsbl/
+
+graphiclineweb:
+    filter: parse_graphiclineweb
+    update_every: 24h0m0s
+    url: https://graphiclineweb.wordpress.com/tech-notes/ip-blacklist/
+    info: '[GraphiclineWeb](https://graphiclineweb.wordpress.com/tech-notes/ip-blacklist/) The IP’s, Hosts and Domains listed in this table are banned universally from accessing websites controlled by the maintainer. Some form of bad activity has been seen from the addresses listed. Bad activity includes: unwanted spiders, rule breakers, comment spammers, trackback spammers, spambots, hacker bots, registration bots and other scripting attackers, harvesters, nuisance spiders, spy bots and organizations spying on websites for commercial reasons.'
+    maintainer: GraphiclineWeb
+    maintainer_url: https://graphiclineweb.wordpress.com/tech-notes/ip-blacklist/
+
+iblocklist_forumspam:
+    filter: p2p_gz
+    update_every: 12h0m0s
+    url: http://list.iblocklist.com/?list=ficutxiwawokxlcyoeye&fileformat=p2p&archiveformat=gz
+    info: Forum spam.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+myip:
+    filter: remove_comments
+    update_every: 24h0m0s
+    url: http://www.myip.ms/files/blacklist/csf/latest_blacklist.txt
+    info: '[myip.ms](http://www.myip.ms/info/about) IPs identified as web bots in the last 10 days, using several sites that require human action'
+    maintainer: MyIP.ms
+    maintainer_url: http://myip.ms/
+
+sblam:
+    filter: remove_comments
+    update_every: 24h0m0s
+    url: http://sblam.com/blacklist.txt
+    info: '[sblam.com](http://sblam.com) IPs used by web form spammers, during the last month'
+    maintainer: sblam.com
+    maintainer_url: http://sblam.com/
+
+stopforumspam:
+    filter: unzip_and_split_csv
+    update_every: 24h0m0s
+    url: http://www.stopforumspam.com/downloads/bannedips.zip
+    info: '[StopForumSpam.com](http://www.stopforumspam.com) Banned IPs used by forum spammers'
+    maintainer: StopForumSpam.com
+    maintainer_url: http://www.stopforumspam.com/
+
+stopforumspam_1d:
+    filter: unzip_and_extract
+    update_every: 1h0m0s
+    url: http://www.stopforumspam.com/downloads/listed_ip_1.zip
+    info: '[StopForumSpam.com](http://www.stopforumspam.com) IPs used by forum spammers in the last 24 hours'
+    maintainer: StopForumSpam.com
+    maintainer_url: http://www.stopforumspam.com/
+
+stopforumspam_7d:
+    filter: unzip_and_extract
+    update_every: 24h0m0s
+    url: http://www.stopforumspam.com/downloads/listed_ip_7.zip
+    info: '[StopForumSpam.com](http://www.stopforumspam.com) IPs used by forum spammers (last 7 days)'
+    maintainer: StopForumSpam.com
+    maintainer_url: http://www.stopforumspam.com/
+
+stopforumspam_30d:
+    filter: unzip_and_extract
+    update_every: 24h0m0s
+    url: http://www.stopforumspam.com/downloads/listed_ip_30.zip
+    info: '[StopForumSpam.com](http://www.stopforumspam.com) IPs used by forum spammers (last 30 days)'
+    maintainer: StopForumSpam.com
+    maintainer_url: http://www.stopforumspam.com/
+
+stopforumspam_90d:
+    filter: unzip_and_extract
+    update_every: 24h0m0s
+    url: http://www.stopforumspam.com/downloads/listed_ip_90.zip
+    info: '[StopForumSpam.com](http://www.stopforumspam.com) IPs used by forum spammers (last 90 days)'
+    maintainer: StopForumSpam.com
+    maintainer_url: http://www.stopforumspam.com/
+
+stopforumspam_180d:
+    filter: unzip_and_extract
+    update_every: 24h0m0s
+    url: http://www.stopforumspam.com/downloads/listed_ip_180.zip
+    info: '[StopForumSpam.com](http://www.stopforumspam.com) IPs used by forum spammers (last 180 days)'
+    maintainer: StopForumSpam.com
+    maintainer_url: http://www.stopforumspam.com/
+
+stopforumspam_365d:
+    filter: unzip_and_extract
+    update_every: 24h0m0s
+    url: http://www.stopforumspam.com/downloads/listed_ip_365.zip
+    info: '[StopForumSpam.com](http://www.stopforumspam.com) IPs used by forum spammers (last 365 days)'
+    maintainer: StopForumSpam.com
+    maintainer_url: http://www.stopforumspam.com/
+
+stopforumspam_toxic:
+    filter: remove_comments
+    update_every: 24h0m0s
+    url: http://www.stopforumspam.com/downloads/toxic_ip_cidr.txt
+    info: '[StopForumSpam.com](http://www.stopforumspam.com) Networks that have large amounts of spambots and are flagged as toxic. Toxic IP ranges are infrequently changed.'
+    maintainer: StopForumSpam.com
+    maintainer_url: http://www.stopforumspam.com/

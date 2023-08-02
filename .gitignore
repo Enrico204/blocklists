@@ -1,0 +1,6 @@
+/tools/out/
+/tools/tmp/
+.idea/
+testdata
+/tools/merge-blocklists
+/tools/fetch-blocklists

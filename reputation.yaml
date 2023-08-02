@@ -1,0 +1,205 @@
+alienvault_reputation:
+    filter: remove_comments
+    update_every: 6h0m0s
+    url: https://reputation.alienvault.com/reputation.generic
+    info: '[AlienVault.com](https://www.alienvault.com/) IP reputation database'
+    maintainer: Alien Vault
+    maintainer_url: https://www.alienvault.com/
+
+bds_atif:
+    filter: remove_comments
+    update_every: 24h0m0s
+    url: https://www.binarydefense.com/banlist.txt
+    info: Artillery Threat Intelligence Feed and Banlist Feed
+    maintainer: Binary Defense Systems
+    maintainer_url: https://www.binarydefense.com/
+
+ciarmy:
+    filter: remove_comments
+    update_every: 3h0m0s
+    url: http://cinsscore.com/list/ci-badguys.txt
+    info: '[CIArmy.com](http://ciarmy.com/) IPs with poor Rogue Packet score that have not yet been identified as malicious by the community'
+    maintainer: Collective Intelligence Network Security
+    maintainer_url: http://ciarmy.com/
+
+et_botcc:
+    filter: pix_deny_rules_to_ipv4
+    update_every: 12h0m0s
+    url: http://rules.emergingthreats.net/fwrules/emerging-PIX-CC.rules
+    info: '[EmergingThreats.net Command and Control IPs](http://doc.emergingthreats.net/bin/view/Main/BotCC) These IPs are updates every 24 hours and should be considered VERY highly reliable indications that a host is communicating with a known and active Bot or Malware command and control server - (although they say this includes abuse.ch trackers, it does not - check its overlaps)'
+    maintainer: Emerging Threats
+    maintainer_url: http://www.emergingthreats.net/
+    can_be_empty: true
+
+iblocklist_badpeers:
+    filter: p2p_gz
+    update_every: 12h0m0s
+    url: http://list.iblocklist.com/?list=cwworuawihqvocglcoss&fileformat=p2p&archiveformat=gz
+    info: IPs that have been reported for bad deeds in p2p.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_ciarmy_malicious:
+    filter: p2p_gz
+    update_every: 12h0m0s
+    url: http://list.iblocklist.com/?list=npkuuhuxcsllnhoamkvm&fileformat=p2p&archiveformat=gz
+    info: ciarmy.com IP blocklist. Based on information from a network of Sentinel devices deployed around the world, they compile a list of known bad IP addresses. Sentinel devices are uniquely positioned to pick up traffic from bad guys without requiring any type of signature-based or rate-based identification. If an IP is identified in this way by a significant number of Sentinels, the IP is malicious and should be blocked.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_exclusions:
+    filter: p2p_gz
+    update_every: 12h0m0s
+    url: http://list.iblocklist.com/?list=mtxmiireqmjzazcsoiem&fileformat=p2p&archiveformat=gz
+    info: Exclusions.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_fornonlancomputers:
+    filter: p2p_gz
+    update_every: 12h0m0s
+    url: http://list.iblocklist.com/?list=jhaoawihmfxgnvmaqffp&fileformat=p2p&archiveformat=gz
+    info: IP blocklist for non-LAN computers.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_level1:
+    filter: p2p_gz
+    update_every: 12h0m0s
+    url: http://list.iblocklist.com/?list=ydxerpxkpcfqjaybcssw&fileformat=p2p&archiveformat=gz
+    info: 'Level 1 (for use in p2p): Companies or organizations who are clearly involved with trying to stop filesharing (e.g. Baytsp, MediaDefender, Mediasentry). Companies which anti-p2p activity has been seen from. Companies that produce or have a strong financial interest in copyrighted material (e.g. music, movie, software industries a.o.). Government ranges or companies that have a strong financial interest in doing work for governments. Legal industry ranges. IPs or ranges of ISPs from which anti-p2p activity has been observed. Basically this list will block all kinds of internet connections that most people would rather not have during their internet travels.'
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_level2:
+    filter: p2p_gz
+    update_every: 12h0m0s
+    url: http://list.iblocklist.com/?list=gyisgnzbhppbvsphucsw&fileformat=p2p&archiveformat=gz
+    info: Level 2 (for use in p2p). General corporate ranges. Ranges used by labs or researchers. Proxies.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_level3:
+    filter: p2p_gz
+    update_every: 12h0m0s
+    url: http://list.iblocklist.com/?list=uwnukjqktoggdknzrhgh&fileformat=p2p&archiveformat=gz
+    info: Level 3 (for use in p2p). Many portal-type websites. ISP ranges that may be dodgy for some reason. Ranges that belong to an individual, but which have not been determined to be used by a particular company. Ranges for things that are unusual in some way. The L3 list is aka the paranoid list.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_pedophiles:
+    filter: p2p_gz
+    update_every: 12h0m0s
+    url: http://list.iblocklist.com/?list=dufcxgnbjsdwmwctgfuj&fileformat=p2p&archiveformat=gz
+    info: IP ranges of people who we have found to be sharing child pornography in the p2p community.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_rangetest:
+    filter: p2p_gz
+    update_every: 12h0m0s
+    url: http://list.iblocklist.com/?list=plkehquoahljmyxjixpu&fileformat=p2p&archiveformat=gz
+    info: Suspicious IPs that are under investigation.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_spider:
+    filter: p2p_gz
+    update_every: 12h0m0s
+    url: http://list.iblocklist.com/?list=mcvxsnihddgutbjfbghy&fileformat=p2p&archiveformat=gz
+    info: IP list intended to be used by webmasters to block hostile spiders from their web sites.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_spyware:
+    filter: p2p_gz
+    update_every: 12h0m0s
+    url: http://list.iblocklist.com/?list=llvtlsjyoyiczbkjsxpf&fileformat=p2p&archiveformat=gz
+    info: Known malicious SPYWARE and ADWARE IP Address ranges. It is compiled from various sources, including other available spyware blacklists, HOSTS files, from research found at many of the top anti-spyware forums, logs of spyware victims, etc.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_webexploit:
+    filter: p2p_gz_ips
+    update_every: 12h0m0s
+    url: http://list.iblocklist.com/?list=ghlzqtqxnzctvvajwwag&fileformat=p2p&archiveformat=gz
+    info: Web server hack and exploit attempts. IP addresses related to current web server hack and exploit attempts that have been logged or can be found in and cross referenced with other related IP databases. Malicious and other non search engine bots will also be listed here, along with anything found that can have a negative impact on a website or webserver such as proxies being used for negative SEO hijacks, unauthorised site mirroring, harvesting, scraping, snooping and data mining / spy bot / security & copyright enforcement companies that target and continuously scan webservers.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+pushing_inertia_blocklist:
+    filter: parse_pushing_inertia
+    update_every: 24h0m0s
+    url: https://raw.githubusercontent.com/pushinginertia/ip-blacklist/master/ip_blacklist.conf
+    info: '[Pushing Inertia](https://github.com/pushinginertia/ip-blacklist) IPs of hosting providers that are known to host various bots, spiders, scrapers, etc. to block access from these providers to web servers.'
+    maintainer: Pushing Inertia
+    maintainer_url: https://github.com/pushinginertia/ip-blacklist
+
+spamhaus_drop:
+    filter: remove_comments_semi_colon
+    update_every: 12h0m0s
+    url: http://www.spamhaus.org/drop/drop.txt
+    info: '[Spamhaus.org](http://www.spamhaus.org) DROP list (according to their site this list should be dropped at tier-1 ISPs globally)'
+    maintainer: Spamhaus.org
+    maintainer_url: http://www.spamhaus.org/
+
+spamhaus_edrop:
+    filter: remove_comments_semi_colon
+    update_every: 12h0m0s
+    url: http://www.spamhaus.org/drop/edrop.txt
+    info: '[Spamhaus.org](http://www.spamhaus.org) EDROP (extended matches that should be used with DROP)'
+    maintainer: Spamhaus.org
+    maintainer_url: http://www.spamhaus.org/
+
+turris_greylist:
+    filter: parse_turris_greylist
+    update_every: 168h0m0s
+    url: https://view.sentinel.turris.cz/greylist-data/greylist-latest.csv
+    info: '[Turris Greylist](https://www.turris.cz/en/greylist) IPs that are blocked on the firewalls of Turris routers. The data is processed and classified every week and behaviour of IP addresses that accessed a larger number of Turris routers is evaluated. The result is a list of addresses that have tried to obtain information about services on the router or tried to gain access to them. We do not recommend to use these data as a list of addresses that should be blocked but it can be used for example in analysis of the traffic in other networks.'
+    maintainer: Turris
+    maintainer_url: https://www.turris.cz/en/greylist
+
+hphosts_fsa:
+    filter: hphosts2ips
+    update_every: 24h0m0s
+    url: http://hosts-file.net/fsa.txt
+    info: '[hpHosts](http://hosts-file.net/?s=Download) fraud sites listed in the hpHosts database. The maintainer''s file contains hostnames, which have been DNS resolved to IP addresses.'
+    maintainer: hpHosts
+    maintainer_url: http://hosts-file.net/
+    disabled_reason: "TODO: see if it's wise to resolv 288k hosts..."
+
+hphosts_mmt:
+    filter: hphosts2ips
+    update_every: 24h0m0s
+    url: http://hosts-file.net/mmt.txt
+    info: '[hpHosts](http://hosts-file.net/?s=Download) sites involved in misleading marketing (e.g. fake Flash update adverts) listed in the hpHosts database. The maintainer''s file contains hostnames, which have been DNS resolved to IP addresses.'
+    maintainer: hpHosts
+    maintainer_url: http://hosts-file.net/
+    disabled_reason: "TODO: see if it's wise to resolv 288k hosts..."
+
+hphosts_pha:
+    filter: hphosts2ips
+    update_every: 24h0m0s
+    url: http://hosts-file.net/pha.txt
+    info: '[hpHosts](http://hosts-file.net/?s=Download) illegal pharmacy sites listed in the hpHosts database. The maintainer''s file contains hostnames, which have been DNS resolved to IP addresses.'
+    maintainer: hpHosts
+    maintainer_url: http://hosts-file.net/
+    disabled_reason: "TODO: see if it's wise to resolv 288k hosts..."
+
+hphosts_psh:
+    filter: hphosts2ips
+    update_every: 24h0m0s
+    url: http://hosts-file.net/psh.txt
+    info: '[hpHosts](http://hosts-file.net/?s=Download) phishing sites listed in the hpHosts database. The maintainer''s file contains hostnames, which have been DNS resolved to IP addresses.'
+    maintainer: hpHosts
+    maintainer_url: http://hosts-file.net/
+    disabled_reason: "TODO: see if it's wise to resolv 288k hosts..."
+
+hphosts_wrz:
+    filter: hphosts2ips
+    update_every: 24h0m0s
+    url: http://hosts-file.net/wrz.txt
+    info: '[hpHosts](http://hosts-file.net/?s=Download) warez/piracy sites listed in the hpHosts database. The maintainer''s file contains hostnames, which have been DNS resolved to IP addresses.'
+    maintainer: hpHosts
+    maintainer_url: http://hosts-file.net/
+    disabled_reason: "TODO: see if it's wise to resolv 288k hosts..."

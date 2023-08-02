@@ -1,0 +1,322 @@
+bitcoin_nodes:
+    filter: extract_ipv4_from_any_file
+    update_every: 10m0s
+    url: https://getaddr.bitnodes.io/api/v1/snapshots/latest/
+    info: '[BitNodes](https://getaddr.bitnodes.io/) Bitcoin connected nodes, globally.'
+    maintainer: BitNodes
+    maintainer_url: https://getaddr.bitnodes.io/
+
+datacenters:
+    filter: parse_client9_ipcat_datacenters
+    update_every: 24h0m0s
+    url: https://raw.githubusercontent.com/client9/ipcat/master/datacenters.csv
+    info: '[Nick Galbreath](https://github.com/client9/ipcat) This is a list of IPv4 address that correspond to datacenters, co-location centers, shared and virtual webhosting providers. In other words, ip addresses that end web consumers should not be using.'
+    maintainer: Nick Galbreath
+    maintainer_url: https://github.com/client9/ipcat
+
+iblocklist_ads:
+    filter: p2p_gz
+    update_every: 12h0m0s
+    url: http://list.iblocklist.com/?list=dgxtneitpuvgqqcpfulq&fileformat=p2p&archiveformat=gz
+    info: Advertising trackers and a short list of bad/intrusive porn sites.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_edu:
+    filter: p2p_gz
+    update_every: 12h0m0s
+    url: http://list.iblocklist.com/?list=imlmncgrkbnacgcwfjvh&fileformat=p2p&archiveformat=gz
+    info: IPs used by Educational Institutions.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_isp_aol:
+    filter: p2p_gz
+    update_every: 24h0m0s
+    url: http://list.iblocklist.com/?list=toboaiysofkflwgrttmb&fileformat=p2p&archiveformat=gz
+    info: AOL IPs.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_isp_att:
+    filter: p2p_gz
+    update_every: 24h0m0s
+    url: http://list.iblocklist.com/?list=grbtkzijgrowvobvessf&fileformat=p2p&archiveformat=gz
+    info: AT&T IPs.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_isp_cablevision:
+    filter: p2p_gz
+    update_every: 24h0m0s
+    url: http://list.iblocklist.com/?list=dwwbsmzirrykdlvpqozb&fileformat=p2p&archiveformat=gz
+    info: Cablevision IPs.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_isp_charter:
+    filter: p2p_gz
+    update_every: 24h0m0s
+    url: http://list.iblocklist.com/?list=htnzojgossawhpkbulqw&fileformat=p2p&archiveformat=gz
+    info: Charter IPs.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_isp_comcast:
+    filter: p2p_gz
+    update_every: 24h0m0s
+    url: http://list.iblocklist.com/?list=rsgyxvuklicibautguia&fileformat=p2p&archiveformat=gz
+    info: Comcast IPs.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_isp_embarq:
+    filter: p2p_gz
+    update_every: 24h0m0s
+    url: http://list.iblocklist.com/?list=twdblifaysaqtypevvdp&fileformat=p2p&archiveformat=gz
+    info: Embarq IPs.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_isp_qwest:
+    filter: p2p_gz
+    update_every: 24h0m0s
+    url: http://list.iblocklist.com/?list=jezlifrpefawuoawnfez&fileformat=p2p&archiveformat=gz
+    info: Qwest IPs.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_isp_sprint:
+    filter: p2p_gz
+    update_every: 24h0m0s
+    url: http://list.iblocklist.com/?list=hngtqrhhuadlceqxbrob&fileformat=p2p&archiveformat=gz
+    info: Sprint IPs.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_isp_suddenlink:
+    filter: p2p_gz
+    update_every: 24h0m0s
+    url: http://list.iblocklist.com/?list=psaoblrwylfrdsspfuiq&fileformat=p2p&archiveformat=gz
+    info: Suddenlink IPs.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_isp_twc:
+    filter: p2p_gz
+    update_every: 24h0m0s
+    url: http://list.iblocklist.com/?list=aqtsnttnqmcucwrjmohd&fileformat=p2p&archiveformat=gz
+    info: Time Warner Cable IPs.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_isp_verizon:
+    filter: p2p_gz
+    update_every: 24h0m0s
+    url: http://list.iblocklist.com/?list=cdmdbprvldivlqsaqjol&fileformat=p2p&archiveformat=gz
+    info: Verizon IPs.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_org_activision:
+    filter: p2p_gz
+    update_every: 24h0m0s
+    url: http://list.iblocklist.com/?list=gfnxlhxsijzrcuxwzebb&fileformat=p2p&archiveformat=gz
+    info: Activision IPs.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_org_apple:
+    filter: p2p_gz
+    update_every: 24h0m0s
+    url: http://list.iblocklist.com/?list=aphcqvpxuqgrkgufjruj&fileformat=p2p&archiveformat=gz
+    info: Apple IPs.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_org_blizzard:
+    filter: p2p_gz
+    update_every: 24h0m0s
+    url: http://list.iblocklist.com/?list=ercbntshuthyykfkmhxc&fileformat=p2p&archiveformat=gz
+    info: Blizzard IPs.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_org_crowd_control:
+    filter: p2p_gz
+    update_every: 24h0m0s
+    url: http://list.iblocklist.com/?list=eveiyhgmusglurfmjyag&fileformat=p2p&archiveformat=gz
+    info: Crowd Control Productions IPs.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_org_electronic_arts:
+    filter: p2p_gz
+    update_every: 24h0m0s
+    url: http://list.iblocklist.com/?list=ejqebpcdmffinaetsvxj&fileformat=p2p&archiveformat=gz
+    info: Electronic Arts IPs.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_org_joost:
+    filter: p2p_gz
+    update_every: 24h0m0s
+    url: http://list.iblocklist.com/?list=alxugfmeszbhpxqfdits&fileformat=p2p&archiveformat=gz
+    info: Joost IPs.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_org_linden_lab:
+    filter: p2p_gz
+    update_every: 24h0m0s
+    url: http://list.iblocklist.com/?list=qnjdimxnaupjmpqolxcv&fileformat=p2p&archiveformat=gz
+    info: Linden Lab IPs.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_org_logmein:
+    filter: p2p_gz
+    update_every: 24h0m0s
+    url: http://list.iblocklist.com/?list=tgbankumtwtrzllndbmb&fileformat=p2p&archiveformat=gz
+    info: LogMeIn IPs.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_org_microsoft:
+    filter: p2p_gz
+    update_every: 12h0m0s
+    url: http://list.iblocklist.com/?list=xshktygkujudfnjfioro&fileformat=p2p&archiveformat=gz
+    info: Microsoft IP ranges.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_org_ncsoft:
+    filter: p2p_gz
+    update_every: 24h0m0s
+    url: http://list.iblocklist.com/?list=mwjuwmebrnzyyxpbezxu&fileformat=p2p&archiveformat=gz
+    info: NCsoft IPs.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_org_nintendo:
+    filter: p2p_gz
+    update_every: 24h0m0s
+    url: http://list.iblocklist.com/?list=pevkykuhgaegqyayzbnr&fileformat=p2p&archiveformat=gz
+    info: Nintendo IPs.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_org_pandora:
+    filter: p2p_gz
+    update_every: 24h0m0s
+    url: http://list.iblocklist.com/?list=aevzidimyvwybzkletsg&fileformat=p2p&archiveformat=gz
+    info: Pandora IPs.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_org_pirate_bay:
+    filter: p2p_gz
+    update_every: 24h0m0s
+    url: http://list.iblocklist.com/?list=nzldzlpkgrcncdomnttb&fileformat=p2p&archiveformat=gz
+    info: The Pirate Bay IPs.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_org_punkbuster:
+    filter: p2p_gz
+    update_every: 24h0m0s
+    url: http://list.iblocklist.com/?list=zvwwndvzulqcltsicwdg&fileformat=p2p&archiveformat=gz
+    info: Punkbuster IPs.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_org_riot_games:
+    filter: p2p_gz
+    update_every: 24h0m0s
+    url: http://list.iblocklist.com/?list=sdlvfabdjvrdttfjotcy&fileformat=p2p&archiveformat=gz
+    info: Riot Games IPs.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_org_sony_online:
+    filter: p2p_gz
+    update_every: 24h0m0s
+    url: http://list.iblocklist.com/?list=tukpvrvlubsputmkmiwg&fileformat=p2p&archiveformat=gz
+    info: Sony Online Entertainment IPs.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_org_square_enix:
+    filter: p2p_gz
+    update_every: 24h0m0s
+    url: http://list.iblocklist.com/?list=odyaqontcydnodrlyina&fileformat=p2p&archiveformat=gz
+    info: Square Enix IPs.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_org_steam:
+    filter: p2p_gz
+    update_every: 24h0m0s
+    url: http://list.iblocklist.com/?list=cnxkgiklecdaihzukrud&fileformat=p2p&archiveformat=gz
+    info: Steam IPs.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_org_ubisoft:
+    filter: p2p_gz
+    update_every: 24h0m0s
+    url: http://list.iblocklist.com/?list=etmcrglomupyxtaebzht&fileformat=p2p&archiveformat=gz
+    info: Ubisoft IPs.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_org_xfire:
+    filter: p2p_gz
+    update_every: 24h0m0s
+    url: http://list.iblocklist.com/?list=ppqqnyihmcrryraaqsjo&fileformat=p2p&archiveformat=gz
+    info: XFire IPs.
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+iblocklist_yoyo_adservers:
+    filter: p2p_gz
+    update_every: 12h0m0s
+    url: http://list.iblocklist.com/?list=zhogegszwduurnvsyhdf&fileformat=p2p&archiveformat=gz
+    info: pgl.yoyo.org ad servers
+    maintainer: iBlocklist.com
+    maintainer_url: https://www.iblocklist.com/
+
+yoyo_adservers:
+    filter: cat
+    update_every: 12h0m0s
+    url: http://pgl.yoyo.org/adservers/iplist.php?ipformat=plain&showintro=0&mimetype=plaintext
+    info: '[Yoyo.org](http://pgl.yoyo.org/adservers/) IPs of ad servers'
+    maintainer: Yoyo.org
+    maintainer_url: http://pgl.yoyo.org/adservers/
+
+coinbl_hosts:
+    filter: hphosts2ips
+    update_every: 24h0m0s
+    url: https://zerodot1.gitlab.io/CoinBlockerLists/hosts
+    info: '[CoinBlockerLists](https://gitlab.com/ZeroDot1/CoinBlockerLists) Simple lists that can help prevent cryptomining in the browser or other applications. This list contains all domains - A list for administrators to prevent mining in networks. The maintainer''s file contains hostnames, which have been DNS resolved to IP addresses.'
+    maintainer: CoinBlockerLists
+    maintainer_url: https://gitlab.com/ZeroDot1/CoinBlockerLists
+    disabled_reason: "TODO: see if it's wise to resolv 288k hosts..."
+
+coinbl_hosts_browser:
+    filter: hphosts2ips
+    update_every: 24h0m0s
+    url: https://zerodot1.gitlab.io/CoinBlockerLists/hosts_browser
+    info: '[CoinBlockerLists](https://gitlab.com/ZeroDot1/CoinBlockerLists) Simple lists that can help prevent cryptomining in the browser or other applications. A hosts list to prevent browser mining only. The maintainer''s file contains hostnames, which have been DNS resolved to IP addresses.'
+    maintainer: CoinBlockerLists
+    maintainer_url: https://gitlab.com/ZeroDot1/CoinBlockerLists
+    disabled_reason: "TODO: see if it's wise to resolv 288k hosts..."
+
+coinbl_hosts_optional:
+    filter: hphosts2ips
+    update_every: 24h0m0s
+    url: https://zerodot1.gitlab.io/CoinBlockerLists/hosts_optional
+    info: '[CoinBlockerLists](https://gitlab.com/ZeroDot1/CoinBlockerLists) Simple lists that can help prevent cryptomining in the browser or other applications. This list contains additional domains, for administrators to prevent mining in networks. The maintainer''s file contains hostnames, which have been DNS resolved to IP addresses.'
+    maintainer: CoinBlockerLists
+    maintainer_url: https://gitlab.com/ZeroDot1/CoinBlockerLists
+    disabled_reason: "TODO: see if it's wise to resolv 288k hosts..."
