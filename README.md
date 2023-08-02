@@ -56,6 +56,6 @@ Contributions to this repository are welcome! If you want to add/remove/change s
 
 FireHOL is a powerful yet easy-to-use `iptables`/netfilter configuration tool. The `update-ipsets` script is a component of FireHOL that facilitates the automatic updating of IP sets, which are used in conjunction with `iptables` to allow or deny traffic based on IP addresses.
 
-Unfortunately, FireHOL development seems to be stopped, and the index of blocklists in `update-ipsets` are not maintained anymore (although the script is still working).
+Unfortunately, FireHOL development seems to be stopped, and the index of blocklists in `update-ipsets` are not maintained anymore (although the script is still working). See <https://github.com/firehol/blocklist-ipsets/issues/263>.
 
 Please note that **this repository is not the complete FireHOL project**.
