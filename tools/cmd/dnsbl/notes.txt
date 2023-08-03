@@ -1,0 +1,11 @@
+
+To test, use
+
+maps_rbl_reject_code = 450
+
+in Postfix during testing to avoid rejecting legitimate e-mail. And maybe add warn_if_reject before the blacklist check.
+Use the option
+
+reject_rbl_client bl.example.com
+
+Also, TODO: reload IP lists on change

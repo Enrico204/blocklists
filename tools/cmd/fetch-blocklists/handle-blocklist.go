@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"git.netsplit.it/enrico204/blocklists/tools/internal/blocklists"
+	"git.netsplit.it/enrico204/blocklists/tools/internal/filters"
 	"git.netsplit.it/enrico204/blocklists/tools/internal/utils"
 	"go.uber.org/zap"
 	"net/http"
@@ -13,7 +14,7 @@ import (
 
 // handleBlocklist checks if it's time to update the blocklist. If yes, the update is executed using the handler.
 // If no error occurs, the final IP address list is saved in "outDir" using the "tag" as filename
-func handleBlocklist(logger *zap.SugaredLogger, outDir string, hdl blocklists.BlocklistFilter, tag string, bl blocklists.BlocklistIndexItem, debugMode bool, tmpdir string, canBeEmpty bool) error {
+func handleBlocklist(logger *zap.SugaredLogger, outDir string, hdl filters.Filter, tag string, bl blocklists.IndexItem, debugMode bool, tmpdir string, canBeEmpty bool) error {
 	tempFileName := path.Join(tmpdir, tag+".list")
 	destinationFileName := path.Join(outDir, tag+".list")
 

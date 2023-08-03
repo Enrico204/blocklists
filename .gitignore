@@ -4,3 +4,4 @@
 testdata
 /tools/merge-blocklists
 /tools/fetch-blocklists
+/tools/*.log

@@ -1,0 +1,19 @@
+# Example Corefile for DNSBL plugin
+
+.:1053 {
+	acl {
+		allow net 127.0.0.1 ::1
+		drop
+	}
+	log
+	cache
+
+	# DNSBL plugin configuration
+	dnsbl bl.example.com. {
+		# Path to IP lists
+		lists ../../out/bogons.list ../../out/blocklist_de.list
+	}
+	# END DNSBL plugin configuration
+
+	prometheus
+}

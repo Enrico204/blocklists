@@ -92,17 +92,18 @@ The directory will be created if it does not exist.`)
 
 	// For each category, open the blocklist file, and for each blocklist in the file, check if the handler exists,
 	// whether the blocklist is disabled, and then fetch it if it's time.
-	for _, category := range blocklists.BlocklistCategories {
+	for _, category := range blocklists.Categories {
 		logger := logger.With("category", category)
 
 		// Open the blocklist index.
-		blocklistIndex, err := loadBlocklistIndex(logger, path.Join(*blocklistDir, category+".yaml"))
+		logger.Debug("loading blocklist index")
+		blocklistIndex, err := blocklists.LoadBlocklistIndex(path.Join(*blocklistDir, category+".yaml"))
 		if err != nil {
 			logger.Errorw("can't load the blocklist index", "err", err)
 			return err
 		}
 
-		logger.Info("fetching and filtering the lists")
+		logger.Debug("fetching and filtering the lists")
 		for tag, bl := range blocklistIndex {
 			logger := logger.With("blocklist", tag)
 

@@ -1,0 +1,47 @@
+linters:
+  enable:
+    - asciicheck
+    - bidichk
+    - bodyclose
+    - contextcheck
+    - dogsled
+    - durationcheck
+    - errname
+    - errorlint
+    - exportloopref
+    - forbidigo
+    - forcetypeassert
+#    - gochecknoinits
+    - goconst
+    - gocritic
+    - godox
+    - gofmt
+    - gosec
+    - nakedret
+    - nestif
+    - prealloc
+    - revive
+    - rowserrcheck
+    - sqlclosecheck
+    - unconvert
+    - unparam
+    - wastedassign
+    - whitespace
+
+linters-settings:
+  goconst:
+    min-occurrences: 5
+
+  nestif:
+    min-complexity: 20
+
+  gocritic:
+    disabled-checks:
+      - ifElseChain
+
+output:
+  uniq-by-line: false
+
+issues:
+  max-issues-per-linter: 0
+  max-same-issues: 0

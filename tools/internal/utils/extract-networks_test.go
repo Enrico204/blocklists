@@ -16,11 +16,11 @@ func TestExtractNetworks(t *testing.T) {
 13.14.15.16
 ::2
 `
-	clean := `1.2.3.4/32
+	clean := `::2/128
+1.2.3.4/32
 5.6.7.8/32
 9.10.11.12/32
 13.14.15.16/32
-::2/128
 `
 
 	networks, err := ExtractNetworks(zap.NewNop().Sugar(), strings.NewReader(dirty))
@@ -36,6 +36,8 @@ func TestExtractNetworks(t *testing.T) {
 		buf.WriteRune('\n')
 	}
 	if buf.String() != clean {
+		t.Log(buf.String())
+		t.Log(clean)
 		t.Fatal("different outputs")
 	}
 }

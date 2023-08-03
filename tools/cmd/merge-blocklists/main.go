@@ -4,6 +4,7 @@ import (
 	"errors"
 	"flag"
 	"fmt"
+	"git.netsplit.it/enrico204/blocklists/tools/internal/blocklists"
 	"git.netsplit.it/enrico204/blocklists/tools/internal/utils"
 	"go.uber.org/zap"
 	"net"
@@ -76,7 +77,7 @@ func run() error {
 		logger.Info("loading and merging lists")
 		for _, tag := range details.Include {
 			blocklistPath := path.Join(cfg.ListsDirectory, tag+".list")
-			partial, err := readBlocklistFile(logger, blocklistPath)
+			partial, err := blocklists.ReadBlocklistFile(logger, blocklistPath)
 			if err != nil {
 				logger.Errorw("error reading blocklist file", "err", err, "blocklist-file", blocklistPath)
 				return err

@@ -1,67 +1,35 @@
 # IP List Downloader and Merger
 
-This Go project provides a tool that allows users to download and merge IP lists based on the YAML IP list index present in the root directory of the repository. The tool streamlines the process of fetching, cleaning and combining multiple IP lists into a single, unified file for use with various networking and security applications.
+This Go project provides tools that allows users to manage IP lists based on the YAML IP list index present in the root directory of the repository. These tools streamline the process of fetching, cleaning and combining multiple IP lists into a single, unified file for use with various networking and security applications.
+
+Currently, there are these tools:
+* `analyze-traffic`: match IP addresses from a PCAP or live capture against IP lists (to analyze IP lists and matches offline);
+* `fetch-blocklists`: fetches all IP lists configured in YAML files (such as those in the repository root), filter and clean the result to have simple IP lists to load in `ipset` or other tools;
+* `merge-blocklists`: to merge multiple IP lists together in one file, aggregating prefixes;
+* `dnsbl`: a CoreDNS plugin that implements a DNSBL server querying IP lists.
+
+There is a README file in each executable under `cmd/` with information on what it does, how, and how to use it.
 
 The project is a work in progress.
 
-## Features
-
-* Download multiple IP lists from a YAML index, **respecting the Last-Modified header and the update interval specified in the YAML**.
-* Merge together multiple IP lists specified in a YAML configuration file, aggregating prefixes.
-* IPv4 and IPv6 compatibility.
-* Lightweight and written in Go for efficient performance.
-
 ## Usage
 
-Pre-built binaries are not available yet. In the meantime, you need a Go 1.19 compiler. You can download the source code, and execute these commands inside the `tools/` directory:
+Pre-built binaries are not available yet. In the meantime, you need a Go 1.19 compiler for all projects, plus gcc and
+libpcap headers and objects for `analyze-traffic`.
+
+To build static binaries:
 
 ```sh
-$ go build -o fetch-blocklists ./cmd/fetch-blocklists
-$ go build -o merge-blocklists ./cmd/merge-blocklists
+CGO_ENABLED=0 go build -o fetch-blocklists -a -ldflags '-extldflags "-static"' ./cmd/fetch-blocklists/ 
 ```
 
-Then, you can launch them as command line tools:
+## Project structure
 
-```sh
-$ ./fetch-blocklists -h
+This project contains multiple executables. They are defined in `cmd/`. Note that `dnsbl` is defined as separate Go
+package as it requires a large number of dependencies.
 
-Fetches all IP lists configured in YAML files and aggregate them.
-
-Usage of ./fetch-blocklists:
-  -cache-directory string
-        Cache directory.
-        The program will store downloaded but unfiltered lists in this directory.
-        It's used to avoid re-downloading the same content again and again.
-        The directory will be created if it does not exist. (default "tmp/")
-  -debug
-        Debug mode: verbose log + dumps HTTP headers in the log.
-  -lists-directory string
-        Blocklists YAML files location. (default ".")
-  -output-directory string
-        Output directory.
-        Cleaned, filtered and aggregated lists will be saved here.
-        The directory will be created if it does not exist. (default "out/")
-  -quiet
-        Print only warnings and errors to stderr.
-  -verbose
-        Verbose log: prints more information about what the program is doing.
-```
-
-```sh
-$ ./merge-blocklists -h
-
-Merges multiple blocklists, aggregating prefixes.
-
-Usage of ./merge-blocklists:
-  -cfg string
-        Configuration file. (default "cfg/firehol.yaml")
-  -quiet
-        Print only warnings and errors to stderr.
-  -verbose
-        Verbose log: prints more information about what the program is doing.
-```
-
-An example of the merger configuration is in `cfg/firehol.yaml`. The example produces a set of IP lists similar to the FireHOL ones.
+The `internal/` directory contains all internal packages: `internal/filters/` are "filters" used to download and clean
+IP lists from their source.
 
 ## License
 

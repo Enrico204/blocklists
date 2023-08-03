@@ -1,29 +1,29 @@
 package main
 
 import (
-	"git.netsplit.it/enrico204/blocklists/tools/internal/blocklists"
-	ackscanners "git.netsplit.it/enrico204/blocklists/tools/internal/blocklists/acknowledged_scanners"
-	"git.netsplit.it/enrico204/blocklists/tools/internal/blocklists/apacheconf"
-	"git.netsplit.it/enrico204/blocklists/tools/internal/blocklists/csv"
-	"git.netsplit.it/enrico204/blocklists/tools/internal/blocklists/dataplane"
-	"git.netsplit.it/enrico204/blocklists/tools/internal/blocklists/dshield"
-	et_pix "git.netsplit.it/enrico204/blocklists/tools/internal/blocklists/emergingthreats-pix"
-	gpfcomics "git.netsplit.it/enrico204/blocklists/tools/internal/blocklists/gpf_comics"
-	"git.netsplit.it/enrico204/blocklists/tools/internal/blocklists/hostdeny"
-	"git.netsplit.it/enrico204/blocklists/tools/internal/blocklists/ip9datacenters"
-	"git.netsplit.it/enrico204/blocklists/tools/internal/blocklists/local_files"
-	"git.netsplit.it/enrico204/blocklists/tools/internal/blocklists/p2p"
-	"git.netsplit.it/enrico204/blocklists/tools/internal/blocklists/plaintext"
-	"git.netsplit.it/enrico204/blocklists/tools/internal/blocklists/torproject_exits"
-	webpagerx "git.netsplit.it/enrico204/blocklists/tools/internal/blocklists/webpage_regex"
+	"git.netsplit.it/enrico204/blocklists/tools/internal/filters"
+	ackscanners "git.netsplit.it/enrico204/blocklists/tools/internal/filters/acknowledged_scanners"
+	"git.netsplit.it/enrico204/blocklists/tools/internal/filters/apacheconf"
+	"git.netsplit.it/enrico204/blocklists/tools/internal/filters/csv"
+	"git.netsplit.it/enrico204/blocklists/tools/internal/filters/dataplane"
+	"git.netsplit.it/enrico204/blocklists/tools/internal/filters/dshield"
+	et_pix "git.netsplit.it/enrico204/blocklists/tools/internal/filters/emergingthreats-pix"
+	gpfcomics "git.netsplit.it/enrico204/blocklists/tools/internal/filters/gpf_comics"
+	"git.netsplit.it/enrico204/blocklists/tools/internal/filters/hostdeny"
+	"git.netsplit.it/enrico204/blocklists/tools/internal/filters/ip9datacenters"
+	"git.netsplit.it/enrico204/blocklists/tools/internal/filters/local_files"
+	"git.netsplit.it/enrico204/blocklists/tools/internal/filters/p2p"
+	"git.netsplit.it/enrico204/blocklists/tools/internal/filters/plaintext"
+	"git.netsplit.it/enrico204/blocklists/tools/internal/filters/torproject_exits"
+	webpagerx "git.netsplit.it/enrico204/blocklists/tools/internal/filters/webpage_regex"
 	"go.uber.org/zap"
 	"regexp"
 )
 
-// registerFilters contains all the filter tags/names associated with an instance of blocklists.BlocklistFilter
-func registerFilters(logger *zap.SugaredLogger, cacheDir string) map[string]blocklists.BlocklistFilter {
+// registerFilters contains all the filter tags/names associated with an instance of filters.Filter
+func registerFilters(logger *zap.SugaredLogger, cacheDir string) map[string]filters.Filter {
 	logger.Info("initializing filters")
-	var filters = make(map[string]blocklists.BlocklistFilter)
+	var filters = make(map[string]filters.Filter)
 	filters["acknowledged_scanners"] = ackscanners.New(cacheDir)
 	filters["csv"] = csv.New(cacheDir, csv.Options{SkipHeader: true})
 	filters["csv_semicolon"] = csv.New(cacheDir, csv.Options{SkipHeader: true, Comma: ';'})
