@@ -1,7 +1,7 @@
 package main
 
 import (
-	"git.netsplit.it/enrico204/blocklists/tools/internal/blocklists"
+	"git.netsplit.it/enrico204/blocklists/tools/pkg/blocklists"
 	"github.com/yl2chen/cidranger"
 	"path"
 )

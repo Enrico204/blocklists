@@ -2,7 +2,7 @@ package dnsbl
 
 import (
 	"fmt"
-	"git.netsplit.it/enrico204/blocklists/tools/internal/blocklists"
+	"git.netsplit.it/enrico204/blocklists/tools/pkg/blocklists"
 	"github.com/coredns/caddy"
 	"github.com/coredns/coredns/core/dnsserver"
 	"github.com/coredns/coredns/plugin"

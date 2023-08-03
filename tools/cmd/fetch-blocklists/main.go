@@ -4,7 +4,7 @@ import (
 	"errors"
 	"flag"
 	"fmt"
-	"git.netsplit.it/enrico204/blocklists/tools/internal/blocklists"
+	"git.netsplit.it/enrico204/blocklists/tools/pkg/blocklists"
 	"go.uber.org/zap"
 	"os"
 	"path"

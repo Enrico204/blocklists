@@ -35,7 +35,8 @@ Usage of ./analyze-traffic:
 ## Build
 
 ```sh
-$ go build -o analyze-traffic ./cmd/analyze-traffic/
+$ cd tools/cmd/analyze-traffic/
+$ go build -o analyze-traffic .
 ```
 
 ## Examples:

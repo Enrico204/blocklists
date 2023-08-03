@@ -14,8 +14,8 @@ The project is a work in progress.
 
 ## Usage
 
-Pre-built binaries are not available yet. In the meantime, you need a Go 1.19 compiler for all projects, plus gcc and
-libpcap headers and objects for `analyze-traffic`.
+Pre-built binaries are not available yet. In the meantime, you need a Go 1.20 compiler for all projects.
+`analyze-traffic` requires also gcc and libpcap headers and objects.
 
 To build static binaries:
 
@@ -27,6 +27,8 @@ CGO_ENABLED=0 go build -o fetch-blocklists -a -ldflags '-extldflags "-static"' .
 
 This project contains multiple executables. They are defined in `cmd/`. Note that `dnsbl` is defined as separate Go
 package as it requires a large number of dependencies.
+
+The `pkg/` directory contains some public packages, like `blocklists/` which helps to handle YAML indexes and IP lists.
 
 The `internal/` directory contains all internal packages: `internal/filters/` are "filters" used to download and clean
 IP lists from their source.

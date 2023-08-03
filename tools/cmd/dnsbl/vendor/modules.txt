@@ -6,8 +6,8 @@ cloud.google.com/go/compute/internal
 cloud.google.com/go/compute/metadata
 # git.netsplit.it/enrico204/blocklists/tools v0.0.0-00010101000000-000000000000 => ../../
 ## explicit; go 1.19
-git.netsplit.it/enrico204/blocklists/tools/internal/blocklists
-git.netsplit.it/enrico204/blocklists/tools/internal/utils
+git.netsplit.it/enrico204/blocklists/tools/pkg/blocklists
+git.netsplit.it/enrico204/blocklists/tools/pkg/utils
 # github.com/Azure/azure-sdk-for-go v68.0.0+incompatible
 ## explicit
 github.com/Azure/azure-sdk-for-go/profiles/latest/dns/mgmt/dns

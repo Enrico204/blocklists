@@ -1,0 +1,37 @@
+# git.netsplit.it/enrico204/blocklists/tools v0.0.0-00010101000000-000000000000 => ../../
+## explicit; go 1.19
+git.netsplit.it/enrico204/blocklists/tools/pkg/blocklists
+git.netsplit.it/enrico204/blocklists/tools/pkg/utils
+# github.com/google/gopacket v1.1.19
+## explicit; go 1.12
+github.com/google/gopacket
+github.com/google/gopacket/layers
+github.com/google/gopacket/pcap
+# github.com/ldkingvivi/go-aggregate v0.0.0-20200406164845-67d85734711c
+## explicit; go 1.13
+github.com/ldkingvivi/go-aggregate
+# github.com/yl2chen/cidranger v1.0.2
+## explicit; go 1.13
+github.com/yl2chen/cidranger
+github.com/yl2chen/cidranger/net
+# go.uber.org/multierr v1.11.0
+## explicit; go 1.19
+go.uber.org/multierr
+# go.uber.org/zap v1.25.0
+## explicit; go 1.19
+go.uber.org/zap
+go.uber.org/zap/buffer
+go.uber.org/zap/internal
+go.uber.org/zap/internal/bufferpool
+go.uber.org/zap/internal/color
+go.uber.org/zap/internal/exit
+go.uber.org/zap/internal/pool
+go.uber.org/zap/zapcore
+# golang.org/x/sys v0.10.0
+## explicit; go 1.17
+golang.org/x/sys/internal/unsafeheader
+golang.org/x/sys/windows
+# gopkg.in/yaml.v3 v3.0.1
+## explicit
+gopkg.in/yaml.v3
+# git.netsplit.it/enrico204/blocklists/tools => ../../

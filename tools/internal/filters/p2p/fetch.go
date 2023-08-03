@@ -3,7 +3,7 @@ package p2p
 import (
 	"bufio"
 	"fmt"
-	"git.netsplit.it/enrico204/blocklists/tools/internal/utils"
+	"git.netsplit.it/enrico204/blocklists/tools/pkg/utils"
 	"go.uber.org/zap"
 	"net"
 	"net/http"

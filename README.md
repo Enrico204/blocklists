@@ -1,6 +1,6 @@
 # IP (block)lists
 
-This repository contains an index of various IP lists that can be used in firewalls/IDS/IPS to block or detect attacks and other problems. This repo also contains a tool for downloading and processing them.
+This repository contains an index of various IP lists that can be used in firewalls/IDS/IPS to block or detect attacks and other problems. This repo also contains tools for downloading and processing them.
 
 Lists have been divided in multiple files, one for each category:
 * abuse
@@ -16,7 +16,7 @@ Lists have been divided in multiple files, one for each category:
 
 Each entry in a category have some attributes (like `update_every`) that you can use to optimize the download.
 
-The `tools/` directory contains a Go project with a tool to fetch all lists and merge them, so that you can import them in `ipset` or other tools. [See the README inside the `tools/` directory to discover how to use it.](tools/README.md)
+The `tools/` directory contains a Go project with utilities around IP lists: fetch, merge, analyze. They can prepare these lists you can import them in `ipset` or other tools. [See the README inside the `tools/` directory to discover how to use it.](tools/README.md) Some Go packages are available, shall you need to read these YAML/iplists in another way.
 
 I started this repository from the FireHOL IP lists index, as the FireHOL project development seems to be on hiatus. [Further details on differences between this index and FireHOL is in the FIREHOL.md file.](FIREHOL.md)
 
